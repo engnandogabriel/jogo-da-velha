@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #231383;
+    overflow-y: hidden;    
+}
+.container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #341dfd;
+    width: 100%;
+    max-width: 500px;
+   
+    max-height: auto;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.347);
+}
+
+.title {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    color: #fff;
+}
+
+.title h2{
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+.board {
+  display: grid;
+  width: 100%;
+  height: 70%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+/* Célula */
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+  border-left: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+  border-bottom: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+  border-right: none;
+}
+
+/* X */
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before {
+  content: "";
+  height: calc(100px * 0.15);
+  width: calc(100px * 0.9);
+  background: white;
+  position: absolute;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
+  transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
+  transform: rotate(-45deg);
+}
+
+/* Circle */
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after{
+  content: "";
+  height: calc(100px * 0.9);
+  width: calc(100px * 0.9);
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/*Placar */
+.placar{
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-placar{
+  width: 100%;
+  text-align: center;
+}
+
+.resuldado {
+  padding: 10px;
+}
+ /*Modal */
+
+.modal-ganhador {
+  background-color: rgba(0, 0, 0, 0.47);
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+.msg-modal{
+  background-color: #341dfd;
+  border-radius: 10px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.msg {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.reset{
+  display: flex;
+ 
+}
+.reset button{
+  width: 100px;
+  height: 30px;
+  background-color: #231383;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+}
+.reset button:hover{
+  background-color: #2e19a8;
+}
+.visibility{
+  display: block;
+}
