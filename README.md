@@ -15,7 +15,7 @@ A aplicação consiste em um mini game conhecido como Jogo da Velha, onde o intu
 
 # Tecnologias utilizadas
 ## Front end
-- HTML / CSS / JS / JavaScript
+- HTML / CSS / JavaScript
 
 # clonar repositório
 git clone https://github.com/engnandogabriel/jogo-da-velha
