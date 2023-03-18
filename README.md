@@ -20,7 +20,6 @@ A aplicação consiste em um mini game conhecido como Jogo da Velha, onde o intu
 # clonar repositório
 git clone https://github.com/engnandogabriel/jogo-da-velha
 
-
 # Autor
 
 Nando Gabriel Machado Bezerra
