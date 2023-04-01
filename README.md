@@ -1,4 +1,4 @@
-# Big Game Survey 
+# Jogo Da Velha
 Link para acessar o jogo: https://engnandogabriel.github.io/jogo-da-velha/
 
 # Sobre o projeto
